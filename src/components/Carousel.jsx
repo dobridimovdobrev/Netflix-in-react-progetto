@@ -19,8 +19,8 @@ function Carousel(props) {
           768: { slidesPerView: 4, spaceBetween: 10 },
           992: { slidesPerView: 5, spaceBetween: 10 },
           1200: { slidesPerView: 6, spaceBetween: 10 },
-          /* importante mettere questi breakpoints perche lo spazio vuoto si crea solo per screen grandi oltre 1600px */
-          1660: { slidesPerView: 6, spaceBetween: 10 },
+          /* importante mettere questi breakpoints perche lo spazio vuoto si crea solo per screen grandi oltre 1 */
+          1600: { slidesPerView: 6, spaceBetween: 10 },
           1920: { slidesPerView: 8, spaceBetween: 10 },
           
         }}
