@@ -5,9 +5,9 @@ function Footer() {
         <div className="col-12 col-lg-8">
           {/* <!-- social media icone --> */}
           <div className="d-flex gap-3 mb-5 text-center text-md-start">
-            <i className="fa-brands fa-square-facebook fa-2xl" style={{color: "#7f7f7f"}}></i>{" "}
-            <i className="fa-brands fa-square-instagram fa-2xl" style={{color: "#7f7f7f"}}></i>{" "}
-            <i className="fa-brands fa-square-twitter fa-2xl" style={{color: "#7f7f7f"}}></i>{" "}
+            <i className="fa-brands fa-square-facebook fa-2xl" style={{color: "#7f7f7f"}}></i>
+            <i className="fa-brands fa-square-instagram fa-2xl" style={{color: "#7f7f7f"}}></i>
+            <i className="fa-brands fa-square-twitter fa-2xl" style={{color: "#7f7f7f"}}></i>
             <i className="fa-brands fa-square-youtube fa-2xl" style={{color: "#7f7f7f"}}></i>
           </div>
 
