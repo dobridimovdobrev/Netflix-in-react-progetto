@@ -12,7 +12,14 @@ function Carousel(props) {
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
-        slidesPerView={10}
+        slidesPerView={6}
+        breakpoints={{
+          320: { slidesPerView: 2, spaceBetween: 10 },
+          480: { slidesPerView: 3, spaceBetween: 10 },
+          768: { slidesPerView: 4, spaceBetween: 10 },
+          992: { slidesPerView: 5, spaceBetween: 10 },
+          1200: { slidesPerView: 6, spaceBetween: 10 }
+        }}
         navigation={true}
         className="netflix-swiper"
         style={{width: '100%'}}

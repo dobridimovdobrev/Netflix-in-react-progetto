@@ -23,13 +23,10 @@ function App() {
         const newReleasesResult = await getMoviesBySearch("2023");
 
         if (trendingResult.Response === "True") {
-          const trendingMoviesData = trendingResult.Search.slice(0, 6).map(
+          const trendingMoviesData = trendingResult.Search.slice(0, 10).map(
             (movie) => ({
               title: movie.Title,
-              image:
-                movie.Poster !== "N/A"
-                  ? movie.Poster
-                  : "./public/media/media1.jpg",
+              image: movie.Poster,
               badge: movie.Year >= 2022 ? "NEW EPISODES" : null,
             })
           );
@@ -37,13 +34,10 @@ function App() {
         }
 
         if (watchAgainResult.Response === "True") {
-          const watchAgainMoviesData = watchAgainResult.Search.slice(0, 6).map(
+          const watchAgainMoviesData = watchAgainResult.Search.slice(0, 10).map(
             (movie) => ({
               title: movie.Title,
-              image:
-                movie.Poster !== "N/A"
-                  ? movie.Poster
-                  : "./public/media/media4.jpg",
+              image: movie.Poster,
             })
           );
           importWatchAgainMovies(watchAgainMoviesData);
@@ -52,13 +46,10 @@ function App() {
         if (newReleasesResult.Response === "True") {
           const newReleasesMoviesData = newReleasesResult.Search.slice(
             0,
-            6
+            10
           ).map((movie) => ({
             title: movie.Title,
-            image:
-              movie.Poster !== "N/A"
-                ? movie.Poster
-                : "./public/media/media9.jpg",
+            image: movie.Poster,
             badge: "NEW EPISODES",
           }));
           importNewReleasesMovies(newReleasesMoviesData);
