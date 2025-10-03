@@ -2,7 +2,7 @@ function Navigation(props) {
   return (
     <header>
       {/* <!-- Navigazione --> */}
-      <nav className="navbar navbar-expand-lg mt-2">
+      <nav className="navbar navbar-expand-lg mt-3">
         <div className="container-fluid px-5">
           <a className="navbar-brand" href="#" aria-label="Netflix">
             <img src={props.logo} width="92" alt="logo" title="Netflix" />

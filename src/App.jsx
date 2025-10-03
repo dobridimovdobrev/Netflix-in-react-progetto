@@ -18,9 +18,9 @@ function App() {
       setLoading(true);
 
       try {
-        const trendingResult = await getMoviesBySearch("batman");
-        const watchAgainResult = await getMoviesBySearch("star wars");
-        const newReleasesResult = await getMoviesBySearch("2023");
+        const trendingResult = await getMoviesBySearch("captain america");
+        const watchAgainResult = await getMoviesBySearch("random");
+        const newReleasesResult = await getMoviesBySearch("matrix");
 
         if (trendingResult.Response === "True") {
           const trendingMoviesData = trendingResult.Search.slice(0, 10).map(
@@ -73,9 +73,7 @@ function App() {
       />
       <main className="container-fluid px-5">
         <TvShowsHeader />
-        {loading ? (
-          <div className="text-center text-white my-5">Loading...</div>
-        ) : (
+        {loading ? (<div className="text-center text-white my-5">Loading...</div>) : (
           <>
             <Carousel title="Trending Now" movies={trendingMovies} />
             <Carousel title="Watch Again" movies={watchAgainMovies} />
