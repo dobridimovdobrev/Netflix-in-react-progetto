@@ -6,22 +6,7 @@ export async function getMoviesBySearch(search) {
         const res = await fetch(`https://www.omdbapi.com/?s=${search}&page=1&apikey=${apiKey}`);
         const result = await res.json();
         
-        if(res.ok && result.Response === "True"){
-           
-            if (result.Search && result.Search.length < 10) {
-                try {
-                   
-                    const res2 = await fetch(`https://www.omdbapi.com/?s=${search.split(' ')[0]}&page=1&apikey=${apiKey}`);
-                    const result2 = await res2.json();
-                    
-                    if (res2.ok && result2.Response === "True" && result2.Search) {
-                       
-                        result.Search = [...result.Search, ...result2.Search];
-                    }
-                } catch (innerError) {
-                    console.log("Errore nella seconda ricerca:", innerError);
-                }
-            }
+        if(res.ok){
             return result; 
         } else {
             throw new Error(result.Error || "Mi dispiace non possiamo visualizzare i film");     
