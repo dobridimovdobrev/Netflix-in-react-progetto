@@ -19,7 +19,7 @@ function App() {
 
       try {
         const trendingResult = await getMoviesBySearch("captain america");
-        const watchAgainResult = await getMoviesBySearch("random");
+        const watchAgainResult = await getMoviesBySearch("superman");
         const newReleasesResult = await getMoviesBySearch("matrix");
 
         if (trendingResult.Response === "True") {
